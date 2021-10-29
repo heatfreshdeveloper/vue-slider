@@ -12,29 +12,29 @@
 <body>
     <header></header>
     <main>
-        <div class="left_side_container">
-            <div class="single-image"
-              v-bind:class="i === currentActiveImage ? 'active' : ''"
-              v-for="image, i in imagesList">
+        <div id="app">
+            <div class="container_sx">
+                <div class="principal-image"
+                v-bind:class="i === immagineCorrente ? 'active' : ''"
+                v-for="image, i in listaImmagini">
 
-              <img v-bind:src="image.url"
-                :alt=" 'Immagine numero ' + (i + 1) ">
+                <img v-bind:src="image.url"
+                    :alt=" 'Immagine numero ' + (i + 1) ">
 
-              <div class="image-text-container">
-                <!-- titolo dell'immagine -->
-                <h3>{{ image.titolo }}</h3>
-                <!-- descrizione dell'immagine -->
-                <p>{{ image.descrizione }}</p>
-              </div>
+                <div class="container_image">
+                    <h3>{{ image.titolo }}</h3>
+                    <p>{{ image.descrizione }}</p>
+                </div>
+                </div>
             </div>
-        </div>
 
-        <div>
-            <button class="btn btn-outline-primary" @click="onPrevClick">prev</button>
-            <button class="btn btn-outline-primary" @click="onNextClick">next</button>
+            <div>
+                <button class="btn btn-outline-primary" @click="onPrevClick">prev</button>
+                <button class="btn btn-outline-primary" @click="onNextClick">next</button>
+            </div>
         </div>
     </main>
     <footer></footer>
-    <script src="js/main.js"></script>
+    <script src="js/vue.js"></script>
 </body>
 </html>
