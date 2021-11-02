@@ -1,34 +1,59 @@
 .container_sx {
-    position: relative;
-    height: 300px;
-  }
+  position: relative;
+  height: 300px;
+}
+
+.container_dx {
+  position: relative;
+  height: 300px;
+  width: 150px;
+}
   
-  .principal-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-  
-  .principal-image.active {
-    opacity: 1;
-  }
+.principal-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.principal-image.active {
+  opacity: 1;
+}
 
 .principal-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
 
-  .principal-image .container_image {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    text-align: right;
-    color: white;
-  }
-  
+.principal-image .container_image {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-align: right;
+  color: white;
+}
+
+.container-thumb {
+  width: 100%;
+  height: calc(100% / 5);
+  filter: saturate(0);
+  opacity: 0.5;
+  translate: all 0.3s;
+}
+
+.container-thumb.active {
+  border: solid 4px white;
+  filter: saturate(1);
+  opacity: 1;
+}
+
+.container-thumb img {
+  object-fit: cover;
+}
+
+
   

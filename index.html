@@ -28,6 +28,16 @@
                 </div>
             </div>
 
+            <div class="container_dx">
+                <div class="container-thumb"
+                  v-bind:class="i === immagineCorrente ? 'active' : ''"
+                  v-for="image, i in listaImmagini">
+
+                  <img v-bind:src="image.url" class="w-100 h-100"
+                    :alt=" 'Immagine numero ' + (i + 1) ">
+                </div>
+            </div>
+
             <div>
                 <button class="btn btn-outline-primary" @click="onPrevClick">prev</button>
                 <button class="btn btn-outline-primary" @click="onNextClick">next</button>
